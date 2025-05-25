@@ -1,0 +1,23 @@
+# Phase 1: Audio I/O & Analysis
+numpy>=1.21,<1.24
+librosa==0.10.1
+soundfile==0.12.1
+pyloudnorm==0.1.1
+matplotlib==3.5.0
+pedalboard==0.7.4
+
+# Phase 2: MIDI Analysis
+pretty_midi==0.2.10
+music21==8.3.0
+jams==0.3.4
+
+# Phase 3: Source Separation & Transcription
+basic_pitch==0.2.4
+demucs==4.0.1
+transformers==4.40.0
+torch==2.0.1
+
+# Phase 7: API
+fastapi==0.110.0
+uvicorn==0.29.0
+requests==2.31.0

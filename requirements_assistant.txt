@@ -1,0 +1,36 @@
+# ───────── Core audio / analysis ─────────
+numpy>=1.22.3,<1.27
+scipy==1.10.1
+librosa==0.11.0
+soundfile>=0.12.1
+pyloudnorm>=0.1.0
+matplotlib==3.8.4
+tqdm==4.66.4
+pandas==1.5.3
+
+# ───────── Symbolic music (MIDI / MusicXML) ─────────
+pretty_midi==0.2.10
+music21==8.3.0
+mido==1.3.3
+jams==0.3.4
+
+# ───────── DSP / ML back-end ─────────
+torch==2.0.0              # CPU wheel; install +cu118 variant if you have CUDA
+torchaudio==2.0.0
+transformers==4.40.0
+basic_pitch==0.2.4
+demucs==4.0.1
+#matchering==2.0.4
+pedalboard==0.7.4
+ffmpeg-python>=0.2.0
+
+# ───────── Dataset & conversion helpers ─────────
+note-seq>=0.0.3
+
+# ───────── Web API (optional) ─────────
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+requests==2.31.0
+
+# ───────── Dev / logging utils ─────────
+rich==13.7.0

@@ -1,0 +1,57 @@
+You’re spot‑on—gluing everything together in the orchestrator before the “backbone” modules are solid will just lead to endless revisits. Let’s lock in the core building blocks first, then wire them up. Here’s a prioritized roadmap of all the missing/upgrade modules we sketched out, with what you’ll see, why it matters, and rough time estimates (remember, you’re learning—these are ballparks!):
+
+🚧 PHASE 1: FOUNDATION MODULES
+Module (file)	What You’ll See & Why It Matters	Time Estimate
+structure_msa.py	run_msaf(audio_path) → section boundaries (start/end times); MSAF gives you research‑grade song structure	~3 hrs
+pitch_tracker.py	extract_pitch_curve(wav_path) → F0 (fundamental frequency) contour; histogram‑based detect_key(curve) for key	~2 hrs
+audio_features.py	Wrap Essentia (open‑source audio analysis library) for chroma, spectral balance, rhythm features (MFCCs: Mel‑Frequency Cepstral Coefficients)	~1.5 hrs
+audio_mastering.py	Add DR (Dynamic Range) and LUFS (Loudness Units Full Scale) targets + “Ozone‑style” EQ suggestions	~1 hr
+audio_vocals.py	Wrap CREPE (pitch estimator) for smooth pitch curves & Parselmouth (Praat) for formants → vocal timbre plots	~2 hrs
+audio_roles.py	Integrate Musicnn (Convolutional Neural Network: CNN) to tag stems as drums/bass/vocals—visual “role” badges	~1 hr
+audio_visualizer.py	Your new visualize_audio() with waveform + Mel‑spectrogram + optional pitch overlay → React‑friendly JSON export	~2 hrs
+audio_summary.py	summarize_audio() that spits out fun, LLM‑styled English summaries (“▶️ 120 BPM, bright mids, chorus at 0:45”)	~1 hr
+
+🎹 PHASE 2: MIDI & SYMBOLIC ANALYSIS
+Module (file)	What You’ll See & Why It Matters	Time Estimate
+midi_analysis.py	analyse_midi(pm) → key changes, chord progression, phrase boundaries (via music21 library)	~2 hrs
+midi_exporter.py	export_to_jams(…) + MusicXML export → shareable, standard‑format annotations	~1 hr
+midi_role_classifier.py	Wrap MIDI‑Miner classifier to tag tracks as melody, bass, drums, chords	~1 hr
+midi_visualizer.py	Interactive JSON/SVG piano‑rolls + time‑signature overlays for your React UI	~1 hr
+
+🤖 PHASE 3: TRANSCRIPTION & STEM SEPARATION
+Module (file)	What You’ll See & Why It Matters	Time Estimate
+audio_to_midi.py	Switch to Onsets‑Frames (note‑seq) + Omnizart multi‑stem option → separate drums, chords, melody in one shot	~2 hrs
+stem_separator.py	Offer HTDemucs for 2/4/5 stems → auto‑route stems into pitch tracker, chord extractor	~1.5 hrs
+whisper_transcriber.py	Time‑coded lyric JSON/SRT via WhisperX or OpenAI Whisper → lyric overlays in UI	~1 hr
+
+🎼 PHASE 4: GENERATION & ACCOMPANIMENT
+Module (file)	What You’ll See & Why It Matters	Time Estimate
+drummify.py	drummify() with --temperature, --primer; plus GrooveVAE style‐controlled groove generation	~3 hrs
+drum_full_track.py	generate_full_track_drums() + fill_generator() for section‑aware fills	~1 hr
+bassline_generator.py	MelodyRNN‑powered bass lines with --density & --style flags	~1 hr
+multi_generate.py	--drums, --melody, --chords, Text2MIDI prompts & MuseGAN phrases	~2 hrs
+mma_accompaniment.py	MMA (Musical MIDI Accompaniment) CLI wrapper → full backing‑track MIDI for any chord chart	~1.5 hrs
+
+💾 PHASE 5: I/O, UX & LLM INTEGRATION
+Module (file)	What You’ll See & Why It Matters	Time Estimate
+export_jams.py	export_to_jams() → JAMS (JSON Annotated Music Specification) files for all annotations	~0.5 hr
+live_control.py	OSC/WebSocket via AbletonOSC → send clips to Live, receive play‑head sync	~2 hrs
+tts.py & chatbot.py	ElevenLabs TTS + your Naberius‑7B (4‑bit on 32 GB RAM GPU) chat UI (“DylarooBot”) within the web app	~2 hrs
+project_io.py	save_project() / load_project() for stateful sessions (like DAW projects)	~1 hr
+
+After PHASE 1–5 → BUILD THE ORCHESTRATOR
+Once all these modules exist and you’ve smoke‑tested them individually, then we:
+
+Write a lean src/main.py that simply imports each new module and runs them in order
+
+Hook it into your FastAPI/React front‑end or Max‑for‑Live device
+
+Finish with unit tests for each module (the stubs regen script will nail these)
+
+🎉 Wrap‑up:
+
+Today: Pick one of the Phase 1 modules—maybe structure_msa.py—and let’s code it together end‑to‑end.
+
+Tomorrow: Add pitch_tracker.py, then audio_features.py, etc.
+
+When Phases 1–5 are done: We’ll generate and wire up the orchestrator in 30 mins flat.

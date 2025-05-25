@@ -1,0 +1,47 @@
+ still looking at multiple versions of librosa to determine which version is compatible with other requirements. This could take a while.
+  Downloading librosa-0.9.1-py3-none-any.whl.metadata (6.9 kB)
+  Downloading librosa-0.9.0-py3-none-any.whl.metadata (6.9 kB)
+  Using cached librosa-0.8.1-py3-none-any.whl.metadata (6.8 kB)
+Requirement already satisfied: scipy>=1.0.0 in c:\users\12502\miniconda3\envs\aimusic\lib\site-packages (from librosa) (1.15.3)
+Requirement already satisfied: scikit-learn!=0.19.0,>=0.14.0 in c:\users\12502\miniconda3\envs\aimusic\lib\site-packages (from librosa) (1.6.1)
+Requirement already satisfied: joblib>=0.14 in c:\users\12502\miniconda3\envs\aimusic\lib\site-packages (from librosa) (1.5.0)
+Requirement already satisfied: decorator>=3.0.0 in c:\users\12502\miniconda3\envs\aimusic\lib\site-packages (from librosa) (5.2.1)
+Collecting resampy>=0.2.2 (from librosa)
+  Using cached resampy-0.4.3-py3-none-any.whl.metadata (3.0 kB)
+Requirement already satisfied: pooch>=1.0 in c:\users\12502\miniconda3\envs\aimusic\lib\site-packages (from librosa) (1.8.2)
+Requirement already satisfied: packaging>=20.0 in c:\users\12502\miniconda3\envs\aimusic\lib\site-packages (from librosa) (25.0)
+Requirement already satisfied: future>=0.16.0 in c:\users\12502\miniconda3\envs\aimusic\lib\site-packages (from pyloudnorm) (1.0.0)
+Collecting h5py (from crepe)
+  Using cached h5py-3.13.0-cp310-cp310-win_amd64.whl.metadata (2.5 kB)
+Collecting hmmlearn>=0.3.0 (from crepe)
+  Using cached hmmlearn-0.3.3-cp310-cp310-win_amd64.whl.metadata (3.1 kB)
+Collecting imageio>=2.3.0 (from crepe)
+  Using cached imageio-2.37.0-py3-none-any.whl.metadata (5.2 kB)
+Collecting googleads==3.8.0 (from parselmouth)
+  Using cached googleads-3.8.0.tar.gz (23 kB)
+  Preparing metadata (setup.py) ... error
+  error: subprocess-exited-with-error
+
+  × python setup.py egg_info did not run successfully.
+  │ exit code: 1
+  ╰─> [1 lines of output]
+      error in googleads setup command: use_2to3 is invalid.
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+(aimusic) PS C:\Users\12502\Documents\AI_music_assistant> conda env remove -n aimusic      # if you already made it before
+
+CondaEnvironmentError: Cannot remove current environment. Deactivate and run conda remove again
+
+(aimusic) PS C:\Users\12502\Documents\AI_music_assistant> conda env create -f environment.yml
+
+CondaValueError: prefix already exists: C:\Users\12502\miniconda3\envs\aimusic
+
+(aimusic) PS C:\Users\12502\Documents\AI_music_assistant>

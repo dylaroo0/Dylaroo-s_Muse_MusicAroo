@@ -1,0 +1,205 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# AI/ML Model files (HUGE - exclude these!)
+*.h5
+*.pb
+*.ckpt
+*.pth
+*.pt
+*.safetensors
+*.bin
+*.onnx
+*.pkl
+*.pickle
+*.joblib
+*.model
+
+# Audio files (can be massive)
+*.wav
+*.mp3
+*.flac
+*.aiff
+*.aif
+*.m4a
+*.ogg
+*.wma
+*.ac3
+
+# Video files
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Large data files and directories
+*.csv
+data/
+datasets/
+models/
+checkpoints/
+cache/
+tmp/
+temp/
+
+# Magenta/TensorFlow specific
+magenta/models/
+tensorflow_models/
+tf_models/
+saved_models/
+
+# Tools and dependencies (large JAR files, executables)
+tools/
+*.jar
+*.war
+*.exe
+*.dmg
+*.pkg
+*jsymbolic*
+*jSymbolic*
+
+# Docker stuff
+*.docker
+docker-compose.override.yml
+.dockerignore
+
+# Logs and dumps
+*.log
+*.out
+*.err
+crash.log*
+
+# MMA output (keep your existing specific exclusions)
+reports/mma/*.mma
+reports/mma/*.mid
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Temporary or backup files
+*.bak
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.atom/
+
+# Large text files (be specific to avoid excluding requirements.txt)
+*.txt.large
+*_large.txt
+debug_*.txt
+
+# Conda environments
+.conda/

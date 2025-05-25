@@ -1,0 +1,9 @@
+----------begin_max5_patcher----------
+1013.3ocuYsrbiCD9Y8Zy4CqpC3h89CLKlL0ZGHn559n3Y0Z8W6IYkpqjJ0rZbtL
+Gj+tb+zvpFlnqrKKG+qO2ecfWQq0+tX73ev7yz/7z98/vu+fBfI6ngvYRRhpe6d
+3J3FF63YQwyuMon2tXGj0y5bQQ7c5cn0Prb2gYuD+8uUuQYJDHcJ1/AbZDEEVkx
+o7OylXOc3oad0PG8KCChZwpizcFfvY6xiNJGD55hFhV6ZnyUzZrXXI5RiV/FhRI
+9jrMKk8xBqq9R0P62uIf9V1iGWfkh+tebJBv1zLWcSlOovoq63x9vQhNiqEzH4n
+37jsu9E5fviQdG6qH+W+QXlnz9fzYLOEkmwcwzXx9p8YJqUc6M98N1E8LRM9NTQJ
+bA7zEwFY3V8h2ydAIpJ977ven7+6f+fd/f/z/+/v6/5+Lxw==
+-----------end_max5_patcher-----------
